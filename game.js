@@ -22717,6 +22717,7 @@
         }
     };
 }
+                
                     return t.getInstance = function() {
                         return null === t.instance && (t.instance = new t), t.instance
                     }, t.prototype.checkDomain = function(t) {
