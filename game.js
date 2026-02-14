@@ -22702,10 +22702,21 @@
                 e.default = r
             },
             "./src/services/BrandManager.js": (t, e) => {
-                var i = function() {
-                    function t() {
-                        this.brandInstances = {}, this.brandDomains = [], this.brandInstances[t.POKI] = "#", t.Current === t.POKI && (this.brandDomains = [], this.brandDomains.push("localhost:"), this.brandDomains.push("ubg42.github.io"))
-                    }
+    var i = function () {
+        function t() {
+            this.brandInstances = {};
+            this.brandDomains = [];
+            this.brandInstances[t.POKI] = "#";
+
+            if (t.Current === t.POKI) {
+                this.brandDomains = [];
+                this.brandDomains.push("localhost:");
+                this.brandDomains.push("ubg42.github.io");
+                this.brandDomains.push("motox3m.gitlab.io");
+            }
+        }
+    };
+}
                     return t.getInstance = function() {
                         return null === t.instance && (t.instance = new t), t.instance
                     }, t.prototype.checkDomain = function(t) {
